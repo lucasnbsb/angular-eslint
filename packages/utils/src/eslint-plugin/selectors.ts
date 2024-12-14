@@ -72,6 +72,11 @@ export const INPUT_ALIAS = [
 
 export const INPUT_PROPERTY_OR_SETTER = `:matches(PropertyDefinition, MethodDefinition[kind='set'])[computed=false]:has(${INPUT_DECORATOR}) > :matches(Identifier, Literal)`;
 
+export const INPUT_SIGNAL_PROPERTY = [
+  `PropertyDefinition[computed=false]:has(CallExpression[callee.name='input']) > :matches(Identifier, Literal)`,
+  `PropertyDefinition[computed=false]:has(MemberExpression[object.name='input'][property.name='required']) > :matches(Identifier, Literal)`,
+];
+
 export const OUTPUTS_METADATA_PROPERTY_LITERAL = `${COMPONENT_OR_DIRECTIVE_CLASS_DECORATOR} ${metadataProperty(
   'outputs',
 )} > ArrayExpression ${LITERAL_OR_TEMPLATE_ELEMENT}`;

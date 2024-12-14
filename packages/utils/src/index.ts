@@ -10,6 +10,7 @@ export {
 
 export { getAriaAttributeKeys } from './eslint-plugin/get-aria-attribute-keys';
 export { getNativeEventNames } from './eslint-plugin/get-native-event-names';
+export { getAttributeNames } from './eslint-plugin/get-native-attribute-names';
 
 export * as ASTUtils from './eslint-plugin/ast-utils';
 export * as RuleFixes from './eslint-plugin/rule-fixes';
